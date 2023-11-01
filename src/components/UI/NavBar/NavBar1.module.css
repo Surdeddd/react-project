@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.logo{
+    display: flex;
+}
+.Number{
+
+}
+
+.container-iteam{
+
+}
+
+
