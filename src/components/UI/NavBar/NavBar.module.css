@@ -4,6 +4,8 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    padding-left: 5%;
+    margin-bottom: 110px;
 }
 .container {
     display: flex;
@@ -60,9 +62,7 @@ a {
 .subMenu {
     position: absolute;
     background-color: #f04d35;
-
-    z-index: 2;
-
+    z-index: 2
 }
 .subMenuEnter {
     animation: fadeIn 0.8s ease-in;
@@ -94,17 +94,11 @@ a {
     padding: 5px 10px 3px 10px;
     transition: background-color 0.3s
 }
-.subItem:hover{
+.subItem:hover {
     background-color: #d13018;
     width: 100%;
-
-
-
-
 }
-
-
-a::after, a.active::after {
+a::after, a.active::after{
     content: "";
     top: calc(100% + 5px);
     width: 100%;
@@ -273,7 +267,74 @@ a:not(.active):not(.withOptions):hover {
         flex-direction: column;
         z-index: 2;
         backdrop-filter: blur(5px);
-        height: 330px;
+        min-height: 330px;
+    }
+    .subMenuTable{
+        display: block;
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .withOptions{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .subMenuTable {
+        display:flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .subMenuTableEnter{
+        animation: slideInTable 0.8s ease forwards;
+    }
+    .subMenuTableExit{
+        animation:slideOutTable  0.8s ease forwards;
+    }
+    @keyframes slideInTable {
+        from {
+            transform: translateX(-300px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideOutTable {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-300px);
+        }
+    }
+    .subItemTable {
+        display: inline-flex;
+        position: relative;
+        width:fit-content;
+        padding: 5px;
+    }
+    .subItemTable:hover{
+        opacity: 0.8;
+    }
+    a.active::after{
+        top: calc(100% + 5px);
+    }
+
+    .subItemTable:after {
+        content: "";
+        top: calc(100% - 2px);
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        background-color: #F14D35;
+        transition: transform 0.4s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .subItemTable:hover::after, a.active::after {
+        transform: scaleX(1);
     }
     .containerItemTable {
         display: inline-flex;
@@ -289,8 +350,6 @@ a:not(.active):not(.withOptions):hover {
     .containerItemTable:first-child {
         margin-top: 80px;
     }
-
-
 
 }
 

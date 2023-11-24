@@ -1,0 +1,85 @@
+.container{
+    padding-top: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-left: 5%;
+    @media (max-width: 1280px) {
+        justify-content: center;
+        gap: 0 20px;
+        padding-left:0;
+    }
+    @media (max-width: 1140px) {
+        gap: 0 10px;
+    }
+    @media (max-width: 1108px) {
+        text-align: center;
+        padding-top: 0;
+    }
+}
+.Text{
+    width: min(100%, 506px);
+    @media (max-width: 1108px) {
+        text-align: center;
+    }
+    >h1 {
+        font: 700 52px/60px "MontSerrat";
+    }
+    >p {
+        font: 500 18px/28px "MontSerrat";
+        padding-block: 15px 0;
+
+    }
+    >a {
+        border: 1px solid #F14D34;
+        padding: 20px 80px;
+        font: 500 12px/12px "MontSerrat";
+        font-family: Montserrat;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 30px;
+    }
+    >a::after {
+        content: none;
+    }
+}
+.infoText {
+    width: min(100%, 593px);
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    @media (max-width: 1108px) {
+        margin: auto;
+        text-align: start;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    @media (max-width: 560px) {
+        padding-inline: 10px;
+    }
+    .item {
+        width: min(100%, 161px);
+        border-left: 3px solid #F14D34;
+        padding-inline: 10px 0;
+        .itemHeader {
+            display: flex;
+            >h1 {
+                font: 700 48px "MontSerrat";
+            }
+
+            >h3 {
+                font: 700 24px "MontSerrat";
+            }
+        }
+        >p {
+            font: 500 12px "MontSerrat";
+            font-family: Montserrat;
+            opacity: 70%;
+            padding-top: 5px;
+        }
+    }
+}
