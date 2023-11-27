@@ -2,6 +2,11 @@ import React from 'react';
 import './styles/App.css';
 import './styles/reset.css';
 import Header from './components/UI/Header/Header';
+import InfoDrupal from "./components/Services/Services";
+import services from "./components/Services/Services";
+import Services from "./components/Services/Services";
+import Cards from "./components/Cards/Cards";
+import Support from "./components/Support/Support";
 
 
 function App() {
@@ -27,6 +32,9 @@ function App() {
             {headerData.map((data, index) => (
                 <Header key={index} {...data} />
             ))}
+           <Services/>
+            <Cards/>
+            <Support/>
         </div>
     );
 }

@@ -26,6 +26,9 @@
     }
     >h1 {
         font: 700 52px/60px "MontSerrat";
+        @media (max-width: 350px){
+            font-size: 48px;
+        }
     }
     >p {
         font: 500 18px/28px "MontSerrat";

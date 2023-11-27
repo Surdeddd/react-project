@@ -4,6 +4,7 @@ import cup from '../../images/cup.png'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
+
 const HeaderContent = () => {
 useEffect(()=>{
     Aos.init();
